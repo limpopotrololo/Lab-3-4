@@ -1,30 +1,48 @@
 package Start;
+
 import Heroes.*;
 
 
 public class Start {
 
     public static void main(String[] args) {
-        Tonel r_tonel = new Tonel();
+        Cave rCave = new Cave();
+        rCave.connectCave();
+        Other rAstronauts = new Other(rCave.getName());
+        rCave.transformation();
+        Cave r1Cave = new Cave() {
+            public void transformation() {
+                System.out.println("Вся пещера осасулена");
+            }
+        };
 
-        Genius r_genius = new Genius();
-        Other r_astronauts = new Other();
-
-        r_genius.tie();
-        Rope r_rope = new Rope();
-        if (r_rope.equals(r_tonel.getK())) {
+        r1Cave.transformation();
+        //place for sosulka and another type of classes
+        TubeMan rTubeMan = new TubeMan();
+        Ponchik rPonchik = new Ponchik();
+        rPonchik.takesmth(rTubeMan.findsmth());
+        Tonel rTonel = new Tonel();
+        rTonel.icing(rTubeMan.findsmth());
+        Genius rGenius = new Genius();
+        rGenius.advice();
+        ClapMan rClapMan = new ClapMan();
+        rClapMan.SlipComment();
+        Rope rRope = new Rope();
+        rRope.qlty();
+        rRope.tension();
+        Tonel.Koef prm = new Tonel.Koef() ;
+        prm.PrKof();
+        rGenius.tie();
+        if (rRope.equals(rTonel.getK())) {
             System.out.println("Качество снаряжения однородно");
-        }
-        else{
+        } else {
             System.out.println("Качество снаряжения неоднородно");
         }
-        r_astronauts.let();
-        r_tonel.get_steps();
-        GlassMan r_glassman = new GlassMan();
-        r_glassman.descent();
-
-
-
+        rAstronauts.let();
+        rTonel.get_steps();
+        GlassMan rGlassman = new GlassMan();
+        rGlassman.descent();
+        rGlassman.feel();
 
 
     }

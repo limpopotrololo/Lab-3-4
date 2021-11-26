@@ -1,21 +1,28 @@
 package Heroes;
 
-import Tone.Human_Interface;
+import Tone.HumanInterface;
 
-public class Genius implements Human_Interface {
+public class Genius implements HumanInterface {
     private String name;
 
-    public Genius(){
+    public Genius() {
         name = "Знайка";
         connect();
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    private void connect(){
+
+    private void connect() {
         System.out.println("Знайка вошел в чат");
     }
-    public void tie(){
-        System.out.println(getName() +" связал шнурки в веревку");
+
+    public void tie() {
+        System.out.println(getName() + " связал шнурки в веревку");
+    }
+
+    public void advice() {
+        System.out.println("Знайка велел остальным связаться веревками aka альпинисты");
     }
 }

@@ -1,31 +1,31 @@
 package Heroes;
 
-import Tone.Human_Interface;
 import Tone.StepsType;
 
-public class Other  {
-
+public class Other {
     private String name;
     private boolean flag;
     private StepsType type = StepsType.ICY;
-    public Other(){
+
+    public Other(String local) {
         name = "Другие";
         flag = true;
-        connect();
-    }
-    private void connect(){
-        System.out.println("Другие появляются");
+        connect(local);
     }
 
-    public StepsType getType(){
+    private void connect(String local) {
+        System.out.println("Другие появляются в локации - " + local);
+    }
+
+    public StepsType getType() {
         return type;
     }
-    public void let(){
-        if (flag){
+
+    public void let() {
+        if (flag) {
             System.out.println("Остальные начинают опускать веревку и начинают вырубать ступеньки 'типа' " + getType());
-        }
-        else {
-            System.out.println("Все остальные стояит и ничего не делают");
+        } else {
+            System.out.println("Все остальные стоят и ничего не делают");
         }
     }
 }
