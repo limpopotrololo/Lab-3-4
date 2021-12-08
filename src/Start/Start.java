@@ -17,7 +17,6 @@ public class Start {
         };
 
         r1Cave.transformation();
-        //place for sosulka and another type of classes
         TubeMan rTubeMan = new TubeMan();
         Ponchik rPonchik = new Ponchik();
         rPonchik.takesmth(rTubeMan.findsmth());
