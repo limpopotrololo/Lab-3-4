@@ -16,7 +16,8 @@ public class Cave implements ThingInterface {
     public double getParametr() {
         return parametr;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
@@ -24,6 +25,7 @@ public class Cave implements ThingInterface {
     public void connectCave() {
         System.out.println("Локация 'пещера' открыта");
     }
+
     public void transformation() {
         System.out.println("Пещера перешла в грот");
     }

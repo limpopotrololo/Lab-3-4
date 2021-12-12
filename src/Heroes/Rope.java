@@ -15,17 +15,21 @@ public class Rope extends AbstractThings implements ThingInterface {
         k = (parametr * Math.random());
         connect(parametr);
     }
-    private class cotton{
+
+    private class cotton {
         private String condition = "отличное";
-        public void cdt(){
+
+        public void cdt() {
             System.out.println("Качество веревки - " + condition);
         }
 
     }
-    public void qlty(){
+
+    public void qlty() {
         cotton line = new cotton();
         line.cdt();
     }
+
     @Override
     public double getParametr() {
         return parametr;

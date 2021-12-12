@@ -5,14 +5,16 @@ import Tone.HumanInterface;
 public class TubeMan implements HumanInterface {
     private String name;
 
-    public TubeMan(){
+    public TubeMan() {
         name = "Тюбик";
         connect();
     }
-    private void connect(){
-        System.out.println(getName()+ " появляется в истории");
+
+    private void connect() {
+        System.out.println(getName() + " появляется в истории");
     }
-    public boolean findsmth(){
+
+    public boolean findsmth() {
         return true;
     }
 

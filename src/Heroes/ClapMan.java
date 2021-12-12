@@ -20,7 +20,7 @@ public class ClapMan implements HumanInterface {
     }
 
     public void SlipComment() {
-            System.out.println("Клепа поскользнулся, по жесткому...");
+        System.out.println("Клепа поскользнулся, по жесткому...");
     }
 
 }

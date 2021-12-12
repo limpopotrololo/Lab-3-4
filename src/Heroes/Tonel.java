@@ -14,8 +14,17 @@ public class Tonel extends AbstractThings implements ThingInterface {
     public Tonel() {
         name = "Тонель";
         parametr = (Math.random() * 45) + 45;
-        k = parametr * Math.random();
         connect(parametr);
+    }
+
+    public void CheckKoef(double parametr) throws Karno {
+        k = parametr * Math.random();
+        if (k < 60.0) {
+            System.out.println("С мат моделью тонеля все норм");
+        } else {
+            throw new Karno(k);
+        }
+
     }
 
     public double getParametr() {
@@ -33,16 +42,17 @@ public class Tonel extends AbstractThings implements ThingInterface {
     public static class Koef {
 
 
-    public void PrKof() {
-        if ( (Math.random() * 45) + 45 > 45 && (Math.random() * 45) + 45 < 90) {
-            System.out.println("Наклон тонеля слишком наклонист: " + (Math.random() * 45) + 45 + " градусов");
-        } else {
-            System.out.println("По тонелю можно спускаться, но наклон все еще " +(Math.random() * 45) + 45 + " градусов");
+        public void PrKof() {
+            if ((Math.random() * 45) + 45 > 45 && (Math.random() * 45) + 45 < 90) {
+                System.out.println("Наклон тонеля слишком наклонист: " + (Math.random() * 45) + 45 + " градусов");
+            } else {
+                System.out.println("По тонелю можно спускаться, но наклон все еще " + (Math.random() * 45) + 45 + " градусов");
+            }
+
         }
 
     }
 
-}
     public void get_steps() {
         System.out.println("Ступеньки для спуска сделаны");
     }

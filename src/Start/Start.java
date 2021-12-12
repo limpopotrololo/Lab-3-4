@@ -6,6 +6,7 @@ import Heroes.*;
 public class Start {
 
     public static void main(String[] args) {
+        double a,c;
         Cave rCave = new Cave();
         rCave.connectCave();
         Other rAstronauts = new Other(rCave.getName());
@@ -29,8 +30,20 @@ public class Start {
         Rope rRope = new Rope();
         rRope.qlty();
         rRope.tension();
-        Tonel.Koef prm = new Tonel.Koef() ;
+        Tonel.Koef prm = new Tonel.Koef();
         prm.PrKof();
+        try {
+            rTonel.CheckKoef(rTonel.getParametr());
+        } catch (Karno e) {
+            System.out.println(e);
+        }
+        try {
+            a = Math.random();
+            c = rTonel.getParametr()/a;
+        }
+        catch (ArithmeticException e){
+            System.out.println("Деление на ноль! Так не нада тут.");
+        }
         rGenius.tie();
         if (rRope.equals(rTonel.getK())) {
             System.out.println("Качество снаряжения однородно");
